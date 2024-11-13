@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 200px;
+  background-color: #F7F8FB;
+}
+
+.company {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.94px;
+  color: #6D6D6D;
+}
