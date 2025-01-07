@@ -5,22 +5,22 @@ import {
   HomePage,
 } from '@/pages';
 
-import { URL_NAME, URL } from '../constants/routes';
+import { ROUTE_NAME, ROUTE_URL } from '../constants/routes';
 
 type ExtendedRouteProps = RouteProps & {
   useLayout?: boolean;
   private?: boolean
 };
 
-export const RouteConfig: Record<URL_NAME, ExtendedRouteProps> = {
-  [URL_NAME.HOME]: {
-    path: URL.HOME,
+export const RouteConfig: Record<ROUTE_NAME, ExtendedRouteProps> = {
+  [ROUTE_NAME.HOME]: {
+    path: ROUTE_URL.HOME,
     element: <HomePage />,
     private: false,
-    useLayout: false,
+    useLayout: true,
   },
-  [URL_NAME.LOGIN]: {
-    path: URL.LOGIN,
+  [ROUTE_NAME.LOGIN]: {
+    path: ROUTE_URL.LOGIN,
     element: <AuthPage />,
     private: false,
     useLayout: false,

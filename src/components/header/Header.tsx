@@ -1,4 +1,8 @@
+import { IoMdSettings } from "react-icons/io";
+
 import st from './Header.module.less'
+import { Link } from "react-router-dom";
+import { ROUTE_URL } from "@/shared/constants/routes";
 
 const Header = () => {
   return (
@@ -6,23 +10,21 @@ const Header = () => {
       <div className={st.logo}>
         Logo
       </div>
-      <div className={st.nav}>
-        <div>
-          Auto-tests
+      <div className={st.tabs}>
+        <Link to={ROUTE_URL.HOME} className={st.tab}>
+          Авто-тесты
+        </Link>
+        <div className={st.tab}>
+          Результаты
         </div>
-        <div>
-          Results
-        </div>
-        <div>
-          Reference
+        <div className={st.tab}>
+          Помощь
         </div>
       </div>
       <div className={st.control}>
-        <div>
-          Settings
-        </div>
-        <div>
-          User
+        <IoMdSettings size={30}/>
+        <div className={st.user}>
+          Иманкулов Артур
         </div>
       </div>
     </div>

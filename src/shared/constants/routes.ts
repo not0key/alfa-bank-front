@@ -1,9 +1,9 @@
-export enum URL_NAME {
+export enum ROUTE_NAME {
   HOME = 'HOME',
   LOGIN = 'LOGIN'
 }
 
-export const URL: Record<URL_NAME, string> = {
-  [URL_NAME.HOME]: '/',
-  [URL_NAME.LOGIN]: '/login'
+export const ROUTE_URL: Record<ROUTE_NAME, string> = {
+  [ROUTE_NAME.HOME]: '/',
+  [ROUTE_NAME.LOGIN]: '/login'
 };
