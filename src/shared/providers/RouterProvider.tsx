@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from '@/containers';
 import { RouteConfig } from '../config/RouteConfig';
 import { PrivateRoute } from '../config/PrivateRoute';
-import { HomePage } from '@/pages';
+import { NotFoundPage } from '@/pages';
 
 export const RouterProvider = () => {
   return (
@@ -24,7 +24,7 @@ export const RouterProvider = () => {
             />
           )
       )}
-      <Route path="*" element={<HomePage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };
