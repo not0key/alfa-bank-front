@@ -1,5 +1,5 @@
-import {UploadInput} from '@/components';
-import st from './ViewTestCase.module.css'
+import { UploadInput } from '@/components';
+import st from './ViewTestCase.module.less'
 
 const ViewTestCase = () => {
   return (

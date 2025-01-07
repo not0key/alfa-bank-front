@@ -4,6 +4,7 @@ import ViewTestCase from "./view-test-case/ViewTestCase";
 import Title from "./ui/title/Title";
 import Description from "./ui/description/Description";
 import Spinner from "./ui/spinner/Spinner";
+import Header from "./header/Header";
 
 export {
   Button,
@@ -11,5 +12,6 @@ export {
   ViewTestCase,
   Title,
   Description,
-  Spinner
+  Spinner,
+  Header
 }

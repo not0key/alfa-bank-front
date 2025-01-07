@@ -1,10 +1,12 @@
 import { Description, Title, ViewTestCase } from "@/components";
 
-import st from './HomePage.module.css'
+import st from './HomePage.module.less'
+import Header from "@/components/header/Header";
 
 const HomePage = () => {
   return (
     <div className={st.container}>
+      <Header />
       <Title>Pairwise тестирования</Title>
       <ViewTestCase />
       <Description>Для использования сервиса загрузите документ в формате .docx или .pdf через форму выше. 
