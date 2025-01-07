@@ -14,12 +14,12 @@ const Header = () => {
         <Link to={ROUTE_URL.HOME} className={st.tab}>
           Авто-тесты
         </Link>
-        <div className={st.tab}>
+        <Link to={ROUTE_URL.RESULTS} className={st.tab}>
           Результаты
-        </div>
-        <div className={st.tab}>
+        </Link>
+        <Link to={ROUTE_URL.DOCUMENTATION} className={st.tab}>
           Помощь
-        </div>
+        </Link>
       </div>
       <div className={st.control}>
         <IoMdSettings size={30}/>

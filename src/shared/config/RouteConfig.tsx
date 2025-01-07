@@ -2,7 +2,9 @@ import { RouteProps } from 'react-router-dom';
 
 import {
   AuthPage,
+  DocumentationPage,
   HomePage,
+  ResultsPage,
 } from '@/pages';
 
 import { ROUTE_NAME, ROUTE_URL } from '../constants/routes';
@@ -24,5 +26,17 @@ export const RouteConfig: Record<ROUTE_NAME, ExtendedRouteProps> = {
     element: <AuthPage />,
     private: false,
     useLayout: false,
+  },
+  [ROUTE_NAME.RESULTS]: {
+    path: ROUTE_URL.RESULTS,
+    element: <ResultsPage />,
+    private: false,
+    useLayout: true,
+  },
+  [ROUTE_NAME.DOCUMENTATION]: {
+    path: ROUTE_URL.DOCUMENTATION,
+    element: <DocumentationPage />,
+    private: false,
+    useLayout: true,
   },
 };
