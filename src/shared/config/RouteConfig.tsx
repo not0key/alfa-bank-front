@@ -5,6 +5,7 @@ import {
   DocumentationPage,
   HomePage,
   ResultsPage,
+  SettingsPage,
 } from '@/pages';
 
 import { ROUTE_NAME, ROUTE_URL } from '../constants/routes';
@@ -36,6 +37,12 @@ export const RouteConfig: Record<ROUTE_NAME, ExtendedRouteProps> = {
   [ROUTE_NAME.DOCUMENTATION]: {
     path: ROUTE_URL.DOCUMENTATION,
     element: <DocumentationPage />,
+    private: false,
+    useLayout: true,
+  },
+  [ROUTE_NAME.SETTINGS]: {
+    path: ROUTE_URL.SETTINGS,
+    element: <SettingsPage />,
     private: false,
     useLayout: true,
   },

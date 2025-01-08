@@ -7,9 +7,9 @@ import { ROUTE_URL } from "@/shared/constants/routes";
 const Header = () => {
   return (
     <div className={st.header}>
-      <div className={st.logo}>
-        Logo
-      </div>
+      {/* <div> */}
+        <img src="/src/assets/images/AlfaBankLogo.png" alt="logo" className={st.logo}/>
+      
       <div className={st.tabs}>
         <Link to={ROUTE_URL.HOME} className={st.tab}>
           Авто-тесты
@@ -22,7 +22,9 @@ const Header = () => {
         </Link>
       </div>
       <div className={st.control}>
-        <IoMdSettings size={30}/>
+        <Link to={ROUTE_URL.SETTINGS}>
+          <IoMdSettings size={30}/>
+        </Link>
         <div className={st.user}>
           Иманкулов Артур
         </div>

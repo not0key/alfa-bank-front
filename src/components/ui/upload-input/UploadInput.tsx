@@ -1,5 +1,5 @@
 import { useState } from "react";
-import st from './UploadInput.module.css';
+import st from './UploadInput.module.less';
 import uploadIcon from '@/assets/upload-icon.svg';
 import Spinner from "../spinner/Spinner";
 

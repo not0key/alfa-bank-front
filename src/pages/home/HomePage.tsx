@@ -1,11 +1,10 @@
-import { Description, Title, ViewTestCase } from "@/components";
+import { Description, ViewTestCase } from "@/components";
 
 import st from './HomePage.module.less'
 
 const HomePage = () => {
   return (
     <div className={st.container}>
-      <Title>Pairwise тестирования</Title>
       <ViewTestCase />
       <Description>Для использования сервиса загрузите документ в формате .docx или .pdf через форму выше. 
         После загрузки система автоматически проведет анализ содержимого и сформирует набор тест-кейсов на основе выявленных данных. 
