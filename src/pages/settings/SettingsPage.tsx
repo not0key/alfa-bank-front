@@ -7,7 +7,7 @@ const SettingsPage = () => {
   const navigate = useNavigate()
 
   const handleLogout = async () => {
-    const isLogout = confirm("Выйти")
+    const isLogout = confirm("Вы точно хотите выйти с аккаунта?")
 
     if (isLogout) {
       navigate(ROUTE_URL.LOGIN)
