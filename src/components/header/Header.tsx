@@ -3,8 +3,19 @@ import { IoMdSettings } from "react-icons/io";
 import st from './Header.module.less'
 import { Link } from "react-router-dom";
 import { ROUTE_URL } from "@/shared/constants/routes";
+import { useAppDispatch, useAppSelector } from "@/shared/hooks/redux";
+import { selectCurrentUser } from "@/store/auth/auth.selectors";
+import { useEffect } from "react";
+import { fetchCurrentUser } from "@/store/auth/auth.action";
 
 const Header = () => {
+  const dispatch = useAppDispatch()
+  const user = useAppSelector(selectCurrentUser)
+
+  useEffect(() => {
+    dispatch(fetchCurrentUser())
+  }, [dispatch])
+
   return (
     <div className={st.header}>
       {/* <div> */}
@@ -26,7 +37,7 @@ const Header = () => {
           <IoMdSettings size={30}/>
         </Link>
         <div className={st.user}>
-          Иманкулов Артур
+          {user?.lastName} {user?.firstName}
         </div>
       </div>
     </div>

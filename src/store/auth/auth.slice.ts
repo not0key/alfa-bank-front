@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { IAuthResponse } from '@/types/auth';
-import { loginUser } from './auth.action';
+import { IAuthResponse, IUser } from '@/types/auth';
+import { fetchCurrentUser, loginUser } from './auth.action';
 
 export interface IAuthState {
   token: IAuthResponse;
+  user: IUser | null
   isLoading: boolean;
   isAuthorized: boolean;
 }
@@ -12,6 +13,7 @@ const initialState: IAuthState = {
   token: {
     token: '',
   },
+  user: null,
   isLoading: false,
   isAuthorized: false,
 };
@@ -34,6 +36,16 @@ export const authUserSlice = createSlice({
       .addCase(loginUser.rejected, (state) => {
         state.isLoading = false;
         state.isAuthorized = false;
+      })
+      .addCase(fetchCurrentUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchCurrentUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoading = false;
+      })
+      .addCase(fetchCurrentUser.rejected, (state) => {
+        state.isLoading = false;
       })
   },
 });
