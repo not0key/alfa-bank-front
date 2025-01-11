@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <div className={st.header}>
-      <img src="/public/AlfaBankLogo.png" alt="logo" className={st.logo} />
+      <img src="/AlfaBankLogo.png" alt="logo" className={st.logo} />
 
       <div className={st.tabs}>
         <NavLink
