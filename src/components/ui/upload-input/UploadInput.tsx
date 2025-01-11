@@ -1,7 +1,9 @@
 import { useState } from "react";
-import st from './UploadInput.module.css';
+
+import { Spinner } from "@/components";
 import uploadIcon from '@/assets/upload-icon.svg';
-import Spinner from "../spinner/Spinner";
+
+import st from './UploadInput.module.css';
 
 const UploadInput = () => {
   const [isTesting, setIsTesting] = useState(false);
