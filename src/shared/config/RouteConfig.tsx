@@ -19,7 +19,7 @@ export const RouteConfig: Record<ROUTE_NAME, ExtendedRouteProps> = {
   [ROUTE_NAME.HOME]: {
     path: ROUTE_URL.HOME,
     element: <HomePage />,
-    private: false,
+    private: true,
     useLayout: true,
   },
   [ROUTE_NAME.LOGIN]: {
@@ -31,19 +31,19 @@ export const RouteConfig: Record<ROUTE_NAME, ExtendedRouteProps> = {
   [ROUTE_NAME.RESULTS]: {
     path: ROUTE_URL.RESULTS,
     element: <ResultsPage />,
-    private: false,
+    private: true,
     useLayout: true,
   },
   [ROUTE_NAME.DOCUMENTATION]: {
     path: ROUTE_URL.DOCUMENTATION,
     element: <DocumentationPage />,
-    private: false,
+    private: true,
     useLayout: true,
   },
   [ROUTE_NAME.SETTINGS]: {
     path: ROUTE_URL.SETTINGS,
     element: <SettingsPage />,
-    private: false,
+    private: true,
     useLayout: true,
   },
 };

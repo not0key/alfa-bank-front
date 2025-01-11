@@ -1,9 +1,10 @@
-import { Title } from "@/components"
+import { TestCasesTable, Title } from "@/components"
 
 const ResultsPage = () => {
   return(
     <>
       <Title>Результаты тестирования</Title>
+      <TestCasesTable />
     </>
   )
 }

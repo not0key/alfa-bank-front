@@ -1,10 +1,57 @@
+/* ViewTestCase.module.less */
+
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;  /* Центрирование элементов по горизонтали */
+  justify-content: center;  /* Центрирование по вертикали */
   padding: 20px 40px;
   background-color: #FFF;
   border: 1px solid #DFE4EA;
   min-height: 675px;
   border-radius: 30px;
+}
+
+.upload {
+  display: flex;
+  justify-content: center;  /* Центрирование UploadInput по горизонтали */
+  align-items: center;  /* Центрирование UploadInput по вертикали */
+  width: 100%;  /* Ширина на всю доступную область */
+  margin-top: 0;  /* Убираем лишний отступ */
+}
+
+.resultContainer {
+  flex-grow: 1;  /* Растягиваем результат на весь контейнер */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Расположение результата сверху */
+  align-items: flex-start;  /* Выравнивание по левому краю */
+  padding: 20px;
+  width: 100%;  /* Ширина на всю доступную область */
+}
+
+.resetButton {
+  background-color: #bfdbfe; 
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #1d4ed8; 
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  border: none;
+  outline: none;
+  width: 250px;
+  margin-top: 20px;
+  margin-left: auto;  /* Центрирование по горизонтали */
+  margin-right: auto; /* Центрирование по горизонтали */
+}
+
+.resetButton:hover {
+  background-color: #93c5fd;
+}
+
+pre {
+  white-space: pre-wrap;  /* Перенос строк, если они не помещаются */
+  word-wrap: break-word;  /* Разрывать слова, если они слишком длинные */
+  margin: 0;  /* Убираем отступы */
 }

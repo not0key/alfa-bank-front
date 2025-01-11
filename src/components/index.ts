@@ -6,6 +6,7 @@ import Description from "./ui/description/Description";
 import Spinner from "./ui/spinner/Spinner";
 import Header from "./header/Header";
 import AuthForm from "./auth-form/AuthForm";
+import TestCasesTable from "./test-cases-table/TestCasesTable";
 
 export {
   Button,
@@ -15,5 +16,6 @@ export {
   Description,
   Spinner,
   Header,
-  AuthForm
+  AuthForm,
+  TestCasesTable
 }
