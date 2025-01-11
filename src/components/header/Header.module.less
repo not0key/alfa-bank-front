@@ -11,30 +11,40 @@
 
   .tabs {
     display: flex;
-    // margin-left: auto;
     margin-right: -10px;
 
     .tab {
       display: flex;
       align-items: center;
-      background-color: aqua;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
       padding: 8px 16px;
       font-size: 18px;
       font-weight: 500;
       height: 80px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: rgb(228, 231, 233);
+      }
+    }
+
+    .active {
+      background-color: #F7F8FB;
+      font-weight: bold;
     }
   }
 
   .control {
     display: flex;
     align-items: center;
-    // margin-left: auto;
     gap: 16px;
-    
+
     a {
       color: black;
     }
-    
+
     .user {
       font-size: 16px;
       font-weight: 500;

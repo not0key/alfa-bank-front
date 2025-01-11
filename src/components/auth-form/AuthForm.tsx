@@ -31,12 +31,12 @@ const AuthForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} noValidate className={st.form}>
       <input 
         type="text"
-        id='login'
+        id='email'
         placeholder='Логин'
-        {...register('login')} 
+        {...register('email')} 
       />
-      {errors.login && (
-        <p>{errors.login.message}</p>
+      {errors.email && (
+        <p>{errors.email.message}</p>
       )}
       <input 
         type="password"

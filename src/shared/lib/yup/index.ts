@@ -2,7 +2,7 @@ import { APP_ERRORS } from '@/shared/constants/errors';
 import * as yup from 'yup';
 
 export const LoginSchema = yup.object().shape({
-  login: yup
+  email: yup
     .string()
     .email(APP_ERRORS.InvalidEmail)
     .required(APP_ERRORS.RequiredField),

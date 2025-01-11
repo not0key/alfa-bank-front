@@ -1,21 +1,13 @@
-// import { Navigate, Outlet } from 'react-router-dom';
-// import { URL } from '../constants/routes';
-
-// export const PrivateRoute = () => {
-//   const isAuthorized = useAppSelector(
-//     (state: RootState) => state.auth.isAuthorized
-//   );
-
-//   return isAuthorized ? <Outlet /> : <Navigate to={URL.LOGIN} replace />;
-// };
-
-import { Outlet } from 'react-router-dom';
-// import { URL } from '../constants/routes';
+import { Navigate, Outlet } from 'react-router-dom';
+import { ROUTE_URL } from '../constants/routes';
+import { useAppSelector } from '../hooks/redux';
+import { RootState } from '@/store';
 
 export const PrivateRoute = () => {
-  // const isAuthorized = useAppSelector(
-  //   (state: RootState) => state.auth.isAuthorized
-  // );
+  const isAuthorized = useAppSelector(
+    (state: RootState) => state.auth.isAuthorized
+  );
 
-  return  <Outlet />;
+  return isAuthorized ? <Outlet /> : <Navigate to={ROUTE_URL.LOGIN} replace />;
 };
+
