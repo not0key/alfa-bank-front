@@ -1,8 +1,8 @@
-import { HomePage } from '@/pages'
+import { RouterProvider } from './shared/providers/RouterProvider'
 
 function App() {
   return (
-    <HomePage />
+    <RouterProvider />
   )
 }
 
